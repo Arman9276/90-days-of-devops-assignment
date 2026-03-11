@@ -1,0 +1,21 @@
+server:
+  name: devops-server
+  ip: 192.168.1.10
+  port: 8080
+
+database:
+  host: localhost
+  name: devops_db
+  credentials:
+    user: admin
+    password: strongpassword
+
+startup_script_literal: |
+  echo "Starting server"
+  sudo systemctl start nginx
+  echo "Server started"
+
+startup_script_folded: >
+  echo "Starting server"
+  sudo systemctl start nginx
+  echo "Server started"
